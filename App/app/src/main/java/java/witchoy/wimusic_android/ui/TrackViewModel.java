@@ -1,48 +1,33 @@
-package java.witchoy.wimusic_android;
+package java.witchoy.wimusic_android.ui;
 
 import android.app.Application;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.witchoy.wimusic_android.data.repository.ModelRepository;
+import java.witchoy.wimusic_android.model.Track;
 
 public class TrackViewModel extends AndroidViewModel {
 
-    private final MutableLiveData<JSONArray> tracks;
+    private final MutableLiveData<ArrayList<Track>> _tracks = new MutableLiveData<>();
+    private final ModelRepository _repository;
 
-    public TrackViewModel(android.app.Application application) {
+    public TrackViewModel(@NonNull Application application) {
         super(application);
-        tracks = new MutableLiveData<>(new JSONArray());
+        _repository = new ModelRepository();
         loadData(application);
     }
 
-    public LiveData<JSONArray> getAllTracks() {
-        return tracks;
+    private void loadData(Application context) {
+        _repository.findTracks(_tracks);
     }
 
-    private void loadData(Application context) {
-        try {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.tracks);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
-            StringBuilder sb = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                sb.append(line);
-                sb.append('\n');
-            }
-            org.json.JSONObject jsonObject = new org.json.JSONObject(sb.toString());
-            JSONArray json = jsonObject.getJSONArray("tracks");
-            tracks.setValue(json);
-        } catch (IOException | JSONException e) {
-            e.printStackTrace();
-        }
+    public LiveData<ArrayList<Track>> getAllTracks() {
+        return _tracks;
     }
+
 }
