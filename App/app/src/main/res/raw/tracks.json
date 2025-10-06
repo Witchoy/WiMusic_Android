@@ -1,0 +1,104 @@
+{
+    "tracks": [
+        {
+            "id": 3,
+            "title": "Crying Lightning",
+            "duration": 180,
+            "createdAt": "2025-10-06T16:05:35.868Z",
+            "updatedAt": "2025-10-06T16:05:35.868Z",
+            "fileId": 3,
+            "artists": [
+                {
+                    "id": 2,
+                    "name": "Arctic Monkeys"
+                }
+            ],
+            "albums": [
+                {
+                    "id": 2,
+                    "title": "Humbug"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Got the Life",
+            "duration": 180,
+            "createdAt": "2025-10-06T16:05:12.743Z",
+            "updatedAt": "2025-10-06T16:05:12.743Z",
+            "fileId": 1,
+            "artists": [
+                {
+                    "id": 1,
+                    "name": "Korn"
+                }
+            ],
+            "albums": [
+                {
+                    "id": 1,
+                    "title": "Follow The Leader"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Paradis",
+            "duration": 180,
+            "createdAt": "2025-10-06T16:05:45.449Z",
+            "updatedAt": "2025-10-06T16:05:45.449Z",
+            "fileId": 4,
+            "artists": [
+                {
+                    "id": 3,
+                    "name": "Orelsan"
+                }
+            ],
+            "albums": [
+                {
+                    "id": 3,
+                    "title": "La fête est finie"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Pretty Visitors",
+            "duration": 180,
+            "createdAt": "2025-10-06T16:05:24.652Z",
+            "updatedAt": "2025-10-06T16:05:24.652Z",
+            "fileId": 2,
+            "artists": [
+                {
+                    "id": 2,
+                    "name": "Arctic Monkeys"
+                }
+            ],
+            "albums": [
+                {
+                    "id": 2,
+                    "title": "Humbug"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Quand est-ce que ça s'arrete",
+            "duration": 180,
+            "createdAt": "2025-10-06T16:05:56.913Z",
+            "updatedAt": "2025-10-06T16:05:56.913Z",
+            "fileId": 5,
+            "artists": [
+                {
+                    "id": 3,
+                    "name": "Orelsan"
+                }
+            ],
+            "albums": [
+                {
+                    "id": 3,
+                    "title": "La fête est finie"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WiMusic-Android</string>
+    <string name="data_loading">Data loading...</string>
+    <string name="track_title">Title</string>
+</resources>
