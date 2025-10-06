@@ -20,4 +20,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "WiMusic-Android"
-include ':app'
+include(":app")
